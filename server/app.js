@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({extended: true})); // use body-parser
 var index = require('./modules/index.js'); // '.' means "start in the current directory (of this file)"
 app.set('port', 5000); // set port for server -- more flexible than saying "var port = 4567"
 
+var registerOwner = require('./modules/register_owner.js');
+app.use('/registerOwner', registerOwner);
+
 app.use(express.static('server/public')); // set default path
 app.use('/', index); // serve up index.html via index.js if base URL hit
 

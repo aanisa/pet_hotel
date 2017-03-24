@@ -14,7 +14,7 @@ app.set('port', 5000); // set port for server -- more flexible than saying "var 
 
 app.use(express.static('server/public')); // set default path
 app.use('/', index); // serve up index.html via index.js if base URL hit
-
+app.use('/deletePet', deletePet); //
 
 
 app.listen(app.get('port'), function() { // listen on the port we set

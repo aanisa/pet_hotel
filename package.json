@@ -1,0 +1,26 @@
+{
+  "name": "pet_hotel",
+  "version": "1.0.0",
+  "description": "Pet Hotel Group Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aanisa/pet_hotel.git"
+  },
+  "author": "Team Pet Cemetary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aanisa/pet_hotel/issues"
+  },
+  "homepage": "https://github.com/aanisa/pet_hotel#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "pg": "^6.1.5"
+  }
+}

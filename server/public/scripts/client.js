@@ -30,4 +30,31 @@ function addEventListeners() {
       }
     }); // end ajax call
   }); // end click listener for table-update button
+
+  getPets();
+  $('#petInput').on('submit', function(event){
+    event.preventDefault();
+    console.log($('#petName').val(), $('#petColor').val(), $('#petBreed').val());
+
+    $.ajax({
+      type: "POST",
+      url: "/pets/add",
+      data: {name: $('#petName').val(), color:$('#petColor').val(), breed:$('#petBreed').val()},
+      success: function(response) {
+        getPets();
+      }
+    });
+  });
+
+}
+
+function getPets() {
+  $.ajax({
+    type: 'GET',
+    url: '/pets',
+    success: function(response) {
+      console.log(response);
+      // displayPets(response);
+    }
+  });
 }

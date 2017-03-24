@@ -5,12 +5,16 @@ var app = express(); // unpack (?) express
 // files are located on the external server, when hosting online (heroku, et al)
 var path = require('path');
 var bodyParser = require('body-parser'); // import body-parser
+var deletePet = require('./modules/deletePet.js'); //connects to deletePet module
+
+
 app.use(bodyParser.urlencoded({extended: true})); // use body-parser
 var index = require('./modules/index.js'); // '.' means "start in the current directory (of this file)"
 app.set('port', 5000); // set port for server -- more flexible than saying "var port = 4567"
 
 app.use(express.static('server/public')); // set default path
 app.use('/', index); // serve up index.html via index.js if base URL hit
+app.use('/deletePet', deletePet); //uses deletePet module
 
 
 app.listen(app.get('port'), function() { // listen on the port we set

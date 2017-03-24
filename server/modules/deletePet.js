@@ -17,7 +17,7 @@ var pool = new pg.Pool(config);
 router.delete('/delete/:petId', function(req, res){
 
   var petId= req.params.petId;
-  console.log(req.params.bookId);
+  console.log(req.params.petId);
 
 
   pool.connect(function(errorConnectingToDatabase, db, done){

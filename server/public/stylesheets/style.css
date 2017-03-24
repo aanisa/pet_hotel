@@ -1,3 +1,15 @@
-.container {
-  background-color: salmon;
+h1 {
+  text-align: center;
+  background: black;
+  color: darkred;
+  height: 80px;
+}
+
+
+th, td {
+    border: 1px solid black;
+}
+
+.ownerInput {
+
 }

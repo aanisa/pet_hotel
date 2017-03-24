@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Pet Hotel</title>
@@ -7,9 +8,36 @@
     <script type="text/javascript" src="vendors/jquery.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
 </head>
+
 <body>
-    <div class="container">
-      <h1>Team Pet Cemetary...</h1>
-    </div>
+    <h1>Welcome To Pet Cemetery</h1>
+    <br>
+    <h2>Owner Registration</h2>
+    <form id="ownerInput">
+        First Name <input type="text" id="firstName">
+        Last Name <input type="text" id="lastName">
+        <button type="button" id="registerButton">Register</button>
+    </form>
+    <br>
+    <h2>Pets</h2>
+    <form id="petInput">
+        Owner Name<input type="text" id="ownerSelect">
+        Pet Name<input type="text" id="petName">
+        Color<input type="text" id="petColor">
+        Breed<input type="text" id="petBreed">
+        <button type="button" id="addPet">Add Pet</button>
+    </form>
+    <br>
+    <table>
+      <th>Owner</th>
+      <th>Pet</th>
+      <th>Breed</th>
+      <th>Color</th>
+      <th>Update</th>
+      <th>Delete</th>
+      <th>Check In/Out</th>
+    </table>
+
 </body>
+
 </html>

@@ -4,6 +4,16 @@ $(document).ready(function(){
 
   // call addEventListeners() function
   addEventListeners();
+
+
+  $.ajax({        //register-owner ajax request
+    type: 'POST',
+    url: '/registerOwner',
+    success: function (response) {
+      console.log(response);
+    }
+  });//end ajax
+
 });
 
 // main function for all event listeners
@@ -30,7 +40,7 @@ function addEventListeners() {
       }
     }); // end ajax call
   }); // end click listener for table-update button
-
+  
   getPets();
   $('#petInput').on('submit', function(event){
     event.preventDefault();

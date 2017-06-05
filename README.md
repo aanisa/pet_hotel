@@ -65,4 +65,3 @@ The Visits page will display the check-in data for each pet. Pets that are check
 Pet name
 Check-in date
 Checkout date
-There is no mockup for this page, so be creative and do your best!
